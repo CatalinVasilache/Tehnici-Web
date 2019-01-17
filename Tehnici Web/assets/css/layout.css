@@ -50,6 +50,7 @@ ul{
 	footer{
 		background-color: #1D1B1B;
 		height: 100px;
+		align-items: flex-end;
 	}
 	.footer-menu{
 		padding-top: 30px;
@@ -59,15 +60,15 @@ ul{
 		font-size: 25px;
 		font-weight: 100;
 		display: inline-block;
-		padding-right: 20px;
+		padding-right: 0px;
 	}
 	.menu{
-		display:inline-block;
+		display:flex;
 		float:right;
 	}
 	.menu > li{
 		font-size: 20px;
-		display: inline-block;
+		display: flex;
 	}
 	.title-wrapper{
 		padding-top: 130px;
@@ -84,4 +85,43 @@ ul{
 		padding-top:55px;
 
 	}
+
+	@media only screen and (max-width:768px) {
+	  .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
+	  .head1, .head2, .head3, .back-c, .contact-details, .game{
+	    width:100%;
+    	flex-direction: column;
+	  }
+	  .menu > li{
+		  	display: none;
+		  }
+		  .logo{
+		  	width: 50%;
+		  }
+	}
+
+	@media only screen and (max-width:1280px) and (min-width:768px) {
+	  .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
+	  .head1, .head2, .head3, .back-c, .contact-details, .game{
+	    width:100%;
+	    flex-direction: column;
+	  }
+	  .menu > li{
+		  	display: none;
+		  }
+		  .logo{
+		  	width: 50%;
+		  }
+	}
+
+	@media only screen and (min-width:1280px) {
+	  .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
+	  .head1, .head2, .head3, .back-c, .contact-details, .game{
+	    width:100%;
+	    flex: 1 auto;
+	  }
+
+	}	
+
+
 
