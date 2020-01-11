@@ -1,5 +1,24 @@
 {
-  "firstName": "Catalin",
-  "lastName": "Vasilache",
-  "age": 22
+  "friend": [
+    {
+      "firstName": "Catalin",
+      "lastName": "Vasilache",
+      "age": 22
+    },
+    {
+      "firstName": "Mihai",
+      "lastName": "Boros",
+      "age": 22
+    },
+    {
+      "firstName": "Cosmin",
+      "lastName": "Samoila",
+      "age": 21
+    },
+    {
+      "firstName": "Paula",
+      "lastName": "Dumitrascu",
+      "age": 22
+    }
+  ]
 }
