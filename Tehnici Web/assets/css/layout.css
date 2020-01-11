@@ -1,127 +1,169 @@
-body{
-	margin: 0;
-}
-section{
-	overflow: hidden;
+body {
+    margin: 0;
 }
 
-*{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing: border-box;
+section {
+    overflow: hidden;
 }
 
-a{
-	color: inherit;
-	text-decoration: none;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-p,h1,h3{
-	margin: 0;
-	text-align: left;
-	padding-left: 20px;
-}
-h3{
-	padding-bottom: 10px;
-	padding-top: 10px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-ul{
-	list-style: none;
-	margin: 0;
-	padding:0;
+p, h1, h3 {
+    margin: 0;
+    text-align: left;
+    padding-left: 20px;
 }
 
-	.nav{
-		height:124px;
-		width:100%;
-	}
+h3 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 
-	.container{
-		margin: auto;
-		max-width:960px;
-		width:100%;
-	}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-	.logo{
-		float:left;
-		width: 320px;
-	}
-	footer{
-		background-color: #1D1B1B;
-		height: 100px;
-		align-items: flex-end;
-	}
-	.footer-menu{
-		padding-top: 30px;
-	}
-	.footer-menu li{
-		color: #C4C0BF;
-		font-size: 25px;
-		font-weight: 100;
-		display: inline-block;
-		padding-right: 0px;
-	}
-	.menu{
-		display:flex;
-		float:right;
-	}
-	.menu > li{
-		font-size: 20px;
-		display: flex;
-	}
-	.title-wrapper{
-		padding-top: 130px;
-		text-align: center;
-		width:80%;
-	}
+.nav {
+    height: 110px;
+    width: 100%;
+}
 
-	.intro{
-		padding-top: 3px;
-		float:left;
-		width: 50%;
-	}
-	.right{
-		padding-top:55px;
+.container {
+    margin: auto;
+    max-width: 960px;
+    width: 100%;
+}
 
-	}
+.logo {
+    float: left;
+    width: 320px;
+    height: 100px;
+}
 
-	@media only screen and (max-width:768px) {
-	  .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
-	  .head1, .head2, .head3, .back-c, .contact-details, .game{
-	    width:100%;
-    	flex-direction: column;
-	  }
-	  .menu > li{
-		  	display: none;
-		  }
-		  .logo{
-		  	width: 50%;
-		  }
-	}
+footer {
+    background-color: #1D1B1B;
+    height: 100px;
+    align-items: flex-end;
+}
 
-	@media only screen and (max-width:1280px) and (min-width:768px) {
-	  .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
-	  .head1, .head2, .head3, .back-c, .contact-details, .game{
-	    width:100%;
-	    flex-direction: column;
-	  }
-	  .menu > li{
-		  	display: none;
-		  }
-		  .logo{
-		  	width: 50%;
-		  }
-	}
+.footer-menu {
+    padding-top: 30px;
+}
 
-	@media only screen and (min-width:1280px) {
-	  .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
-	  .head1, .head2, .head3, .back-c, .contact-details, .game{
-	    width:100%;
-	    flex: 1 auto;
-	  }
+.footer-menu li {
+    color: #C4C0BF;
+    font-size: 25px;
+    font-weight: 100;
+    display: inline-block;
+    padding-right: 0px;
+}
 
-	}	
+.menu {
+    display: flex;
+    float: right;
+}
+
+.menu > li {
+    font-size: 20px;
+    display: flex;
+}
+
+.title-wrapper {
+    padding-top: 130px;
+    text-align: center;
+    width: 80%;
+}
+
+.intro {
+    padding-top: 3px;
+    float: left;
+    width: 50%;
+}
+
+.right {
+    padding-top: 55px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
+    .head1, .head2, .head3, .back-c, .contact-details, .game {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu > li {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 768px) {
+    .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
+    .head1, .head2, .head3, .back-c, .contact-details, .game {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu > li {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .nav, .title-wrapper, .call-to-action, .works, .container, .title-wrapper1,
+    .head1, .head2, .head3, .back-c, .contact-details, .game {
+        width: 100%;
+        flex: 1 auto;
+    }
+
+}
+
+.dropdown {
+    width: 30px;
+}
+
+tr {
+    height: 45px;
+    border-bottom: 1px solid darkred;
+}
+
+td {
+    padding-right: 20px;
+    border-right: 1px solid darkred;
+}
+
+th {
+    padding-right: 20px;
+    color: darkred;
+    border-bottom: 1px solid darkred;
+    border-right: 1px solid darkred;
+    text-align: left;
+}
+
+#table {
+    width: 116%;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
 
 
 
