@@ -1,15 +1,11 @@
-//Manipulare DOM (creare, editare, stergere)
 var rIndex;
 var table = document.getElementById("table");
-var listOfFriends =[];
+let listOfFriends = [];
+let id;
 
 populateTable();
 
 class Friend {
-    firstName = "";
-    lastName = "";
-    age = 0;
-
     constructor(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,12 +18,21 @@ class Friend {
 }
 
 function populateTable() {
-    // table = document.getElementById("table");
-    for (var i = 1; i < table.rows.length; i++) {
-        for (var j = 0; j < table.rows[i].cells.length; j++) {
-            table.rows[i].cells[j].innerHTML = listOfFriends[i-1][j];
+    $.ajax('https://my-json-server.typicode.com/CatalinVasilache/Tehnici-Web/friend', {
+        type: 'GET',
+        dataType: 'json',
+        complete: function (data) {
+
+            listOfFriends = data.responseJSON;
+            console.log(listOfFriends);
+
+            for (var i = 1; i < table.rows.length; i++) {
+                table.rows[i].cells[0].innerHTML = listOfFriends[i - 1].firstName;
+                table.rows[i].cells[1].innerHTML = listOfFriends[i - 1].lastName;
+                table.rows[i].cells[2].innerHTML = listOfFriends[i - 1].age;
+            }
         }
-    }
+    });
 }
 
 function checkEmptyInput() {
@@ -63,17 +68,31 @@ function addHtmlTableRow() {
         cell1.innerHTML = fname;
         cell2.innerHTML = lname;
         cell3.innerHTML = age;
-
-        const friend = new Friend(fname, lname, age);
-        document.getElementById("present-bar").innerHTML = friend.present();
+        let friend = new Friend(fname, lname, age);
         listOfFriends.push(friend);
         console.log(listOfFriends);
+        id++;
+        $.ajax({
+            url: 'https://my-json-server.typicode.com/CatalinVasilache/Tehnici-Web/friend',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                firstName: fname,
+                lastName: lname,
+                age: age,
+                id: id
+            },
+            complete: function (data) {
+                console.log(data.responseJSON);
+            }
+        });
+
+        document.getElementById("present-bar").innerHTML = friend.present();
         selectedRowToInput();
     }
 }
 
 function selectedRowToInput() {
-
     for (var i = 1; i < table.rows.length; i++) {
         table.rows[i].onclick = function () {
             document.getElementById("fname").value = this.cells[0].innerHTML;
@@ -85,16 +104,6 @@ function selectedRowToInput() {
 
 selectedRowToInput();
 
-function editHtmlTbleSelectedRow() {
-    var fname = document.getElementById("fname").value,
-        lname = document.getElementById("lname").value,
-        age = document.getElementById("age").value;
-    if (!checkEmptyInput()) {
-        table.rows[rIndex].cells[0].innerHTML = fname;
-        table.rows[rIndex].cells[1].innerHTML = lname;
-        table.rows[rIndex].cells[2].innerHTML = age;
-    }
-}
 
 function removeSelectedRow() {
     table.deleteRow(rIndex);
