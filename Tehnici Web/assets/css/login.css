@@ -1,0 +1,50 @@
+.form-container {
+    display: grid;
+    margin: 10%;
+    border: 2px solid darkred;
+    background-color: #1D1B1B;
+    color: white;
+    text-align: left;
+    height: 100%;
+    box-shadow: 10px -10px 10px 2px grey;
+}
+
+input {
+    width: 100%;
+    margin-top: 5px;
+    background-color: #7a2a2e;
+    border: 1px solid #7a2a2e;
+    height: 25px;
+    color: #e1d4d4;
+    border-radius: 10px;
+}
+
+label {
+    padding: 20px;
+    color: #c2b8b8;
+}
+
+.bck {
+    background: #dce8f2;
+}
+
+.gender-radio {
+    width: 20px;
+}
+
+.checkbox {
+    width: 10%;
+}
+
+.button {
+    width: 50%;
+    margin-left: 25%;
+    height: 40px;
+    margin-bottom: 22px;
+    border: 1px solid darkred;
+    border-radius: 25px;
+    background-color: darkred;
+    color: #a39595;
+    font-size: 20px;
+    font-weight: 700;
+}

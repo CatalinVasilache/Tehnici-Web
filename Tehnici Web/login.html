@@ -9,6 +9,7 @@
     <title> Tehnici Web | Login </title>
     <link href="assets/css/layout.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/login.css" rel="stylesheet">
 </head>
 <body>
 
@@ -20,27 +21,35 @@
     </div>
 </nav>
 
-<section>
+<section class="bck">
     <form class="form-container">
         <label>Full Name
-            <input type="text">
+            <input id="full-name" type="text">
         </label>
         <label>Password
-            <input type="password">
+            <input id="password" type="password">
         </label>
         <label>Email
-            <input type="email">
+            <input id="email" type="email">
         </label>
-        <label>Gender
-            <input type="radio">
+        <label>
+            <br>
+            Male
+            <input class="gender-radio" type="radio" name="gender" value="male" checked>
+            <br>
+            Female
+            <input class="gender-radio" type="radio" name="gender" value="female">
+            <br>
+            Other
+            <input class="gender-radio" type="radio" name="gender" value="other">
         </label>
         <label>My level of ambition:
-            <input type="range">
+            <input type="range" name="points" min="0" max="10">
         </label>
         <label>I agree to receive news about PabloWeb on email!
-            <input type="checkbox">
+            <input class="checkbox" type="checkbox">
         </label>
-        <input type="button" onclick="validate()">
+        <input class="button" type="button" value="Submit" name="Submit" onclick="validate()">
     </form>
 </section>
 

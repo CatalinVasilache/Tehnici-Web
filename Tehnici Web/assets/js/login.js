@@ -26,5 +26,6 @@ function validate(){
         return false;
     }
 
-    return true;
+    location.href = "home.html"
+
 }

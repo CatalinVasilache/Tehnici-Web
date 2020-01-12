@@ -473,11 +473,3 @@ tr:hover {
     cursor: pointer
 }
 
-.form-container {
-    display: grid;
-    margin: 10%;
-    border: 2px solid darkred;
-    background-color: #1D1B1B;
-    color: white;
-}
-
